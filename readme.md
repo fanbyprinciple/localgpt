@@ -10,4 +10,12 @@ ollama pull nomic-*
 
 streamlit run app.py
 
-# CPU chatbot
+# Medical chatbot
+
+https://www.youtube.com/watch?v=kXuHxI5ZcG0
+
+has an issue with pwd command can onl run in linux
+
+# 
+
+
