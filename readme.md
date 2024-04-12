@@ -16,6 +16,13 @@ https://www.youtube.com/watch?v=kXuHxI5ZcG0
 
 has an issue with pwd command can onl run in linux
 
-# 
+# instaling localgpt
+
+https://www.youtube.com/watch?v=9u5rcRHqrrQ&t=15s
+
+using python nvironement 3.8
+
+
+
 
 
