@@ -25,5 +25,7 @@ using python nvironement 3.8
 # THe amazing worl of fineuning llama
 https://github.com/AIAnytime/Chat-with-PDF-Chatbot
 
+![](2024-04-15-01-02-08.png)
 
+first glimmer of success
 
