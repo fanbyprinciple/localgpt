@@ -35,5 +35,9 @@ Quantisation is a technique to reduce the computational and memory cost of runni
 
 reducing bits mean less storage and less energy
 
+https://huggingface.co/blog/os-llms
+
+
+
 
 
