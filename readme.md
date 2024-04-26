@@ -29,3 +29,11 @@ https://github.com/AIAnytime/Chat-with-PDF-Chatbot
 
 first glimmer of success
 
+# quantisation
+
+Quantisation is a technique to reduce the computational and memory cost of running inference by representing the weights and activations with low precision data types like 8 bit integer instead of the usual 32 bit floating point
+
+reducing bits mean less storage and less energy
+
+
+
