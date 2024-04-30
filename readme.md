@@ -46,4 +46,5 @@ first install pytorch cpuonly
 
 next error was regarding ollamma we need to pull the model first
 
+this needed to be done yesterday.
 
