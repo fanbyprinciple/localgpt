@@ -38,6 +38,12 @@ reducing bits mean less storage and less energy
 https://huggingface.co/blog/os-llms
 
 
+# trying on RAG
 
+https://github.com/AllAboutAI-YT/easy-local-rag?tab=readme-ov-file
+
+first install pytorch cpuonly
+
+next error was regarding ollamma we need to pull the model first
 
 
