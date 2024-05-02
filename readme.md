@@ -48,3 +48,15 @@ next error was regarding ollamma we need to pull the model first
 
 this needed to be done yesterday.
 
+# Trying gpt4all
+
+https://webcache.googleusercontent.com/search?q=cache:https://medium.com/rahasak/build-rag-application-using-a-llm-running-on-local-computer-with-gpt4all-and-langchain-13b4b8851db8
+
+# using ollama
+
+https://webcache.googleusercontent.com/search?q=cache:https://medium.com/rahasak/build-rag-application-using-a-llm-running-on-local-computer-with-ollama-and-langchain-e6513853fda0
+
+https://gitlab.com/rahasak-labs/ollama
+
+
+
