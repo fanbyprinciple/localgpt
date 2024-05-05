@@ -27,6 +27,12 @@ https://github.com/AIAnytime/Chat-with-PDF-Chatbot
 
 ![](2024-04-15-01-02-08.png)
 
+# llmware rag demo
+
+https://github.com/AIAnytime/llmware-RAG-Demo-App
+
+
+
 first glimmer of success
 
 # quantisation
