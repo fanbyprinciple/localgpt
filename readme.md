@@ -9,7 +9,7 @@ https://github.com/InsightEdge01/GroqPDFFastChatbot
 ollama pull nomic-*
 
 streamlit run app.py
-
+ 
 # Medical chatbot
 
 https://www.youtube.com/watch?v=kXuHxI5ZcG0
