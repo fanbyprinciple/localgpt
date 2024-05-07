@@ -65,5 +65,7 @@ https://webcache.googleusercontent.com/search?q=cache:https://medium.com/rahasak
 
 https://gitlab.com/rahasak-labs/ollama
 
+# privategpt
+
 
 
