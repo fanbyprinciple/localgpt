@@ -66,6 +66,9 @@ https://webcache.googleusercontent.com/search?q=cache:https://medium.com/rahasak
 https://gitlab.com/rahasak-labs/ollama
 
 # privategpt
+https://docs.privategpt.dev/installation/getting-started/installation
 
+# ollama
 
+https://www.youtube.com/watch?v=4HfSfFvLn9Q&t=91s
 
