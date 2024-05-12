@@ -22,15 +22,15 @@ def load_and_retrieve_docs(url):
 # Function to format documents
 def format_docs(docs):
     return "\n\n".join(doc.page_content for doc in docs)
- 
+
+url = "https://indiannavy.nic.in/" 
 retriever = load_and_retrieve_docs(url)
 print("data loaded")
+retrieved_docs = retriever.invoke(question)
+formatted_context = format_docs(retrieved_docs)
 
 # Function that defines the RAG chain
 def rag_chain(url, question):
-   
-    retrieved_docs = retriever.invoke(question)
-    formatted_context = format_docs(retrieved_docs)
     formatted_prompt = f"Question: {question}\n\nContext: {formatted_context}"
     response = ollama.chat(model='mistral', messages=[{'role': 'user', 'content': formatted_prompt}])
     return response['message']['content']
@@ -38,7 +38,7 @@ def rag_chain(url, question):
 # Gradio interface
 iface = gr.Interface(
     fn=rag_chain,
-    inputs=["text", "text"],
+    inputs=["text"],
     outputs="text",
     title="RAG Chain Question Answering",
     description="Enter a URL and a query to get answers from the RAG chain."
