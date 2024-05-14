@@ -9,6 +9,7 @@ from langchain.memory import ConversationBufferMemory
 from langchain.chains import ConversationalRetrievalChain
 from html_template import css, bot_template, user_template
 from langchain.llms import HuggingFaceHub
+
 import os
 
 def get_pdf_text(pdf_docs):
@@ -32,15 +33,15 @@ def get_text_chunks(text):
 
 
 def get_vectorstore(text_chunks):
-    embeddings = OpenAIEmbeddings()
-    # embeddings = HuggingFaceInstructEmbeddings(model_name="hkunlp/instructor-xl")
+    # embeddings = OpenAIEmbeddings()
+    embeddings = HuggingFaceInstructEmbeddings(model_name="hkunlp/instructor-xl")
     vectorstore = FAISS.from_texts(texts=text_chunks, embedding=embeddings)
     return vectorstore
 
 
 def get_conversation_chain(vectorstore):
-    llm = ChatOpenAI(temperature=0)
-    # llm = HuggingFaceHub(repo_id="google/flan-t5-xxl", model_kwargs={"temperature":0.5, "max_length":512})
+    # llm = ChatOpenAI(temperature=0)
+    llm = HuggingFaceHub(repo_id="google/flan-t5-xxl", model_kwargs={"temperature":0.5, "max_length":512})
 
     memory = ConversationBufferMemory(
         memory_key='chat_history', return_messages=True)
@@ -70,7 +71,7 @@ def handle_userinput(user_question):
 
 
 def main():
-    os.environ["OPENAI_API_KEY"] = "sk-r7QTNcbEexxxxxxxxxxxxxxxxxxxxxxxxx"
+    # os.environ["OPENAI_API_KEY"] = "sk-r7QTNcbEexxxxxxxxxxxxxxxxxxxxxxxxx"
     st.set_page_config(page_title="Chat with multiple PDFs",
                        page_icon=":books:")
     st.write(css, unsafe_allow_html=True)
