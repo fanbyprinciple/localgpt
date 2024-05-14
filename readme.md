@@ -72,7 +72,7 @@ https://docs.privategpt.dev/installation/getting-started/installation
 
 https://www.youtube.com/watch?v=4HfSfFvLn9Q&t=91s
 
-# profound
+# profound, RAG, GROQPDFCHATBOT, ask-pdf
 
 dindt work
 
