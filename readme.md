@@ -72,3 +72,11 @@ https://docs.privategpt.dev/installation/getting-started/installation
 
 https://www.youtube.com/watch?v=4HfSfFvLn9Q&t=91s
 
+# profound
+
+dindt work
+
+# Openwebui
+
+https://github.com/open-webui/open-webui
+
