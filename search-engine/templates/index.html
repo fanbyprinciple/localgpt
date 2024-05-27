@@ -1,0 +1,32 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>PDF Document Search</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/styles.css') }}">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&display=swap" rel="stylesheet">
+</head>
+<body>
+    <div class="container">
+        <h1>Document Search</h1>
+        <form method="post" action="/">
+            <input type="text" name="query" placeholder="Enter your search query" required>
+            <button type="submit">Search</button>
+        </form>
+        {% if results %}
+            <p class="results-count">Found {{ results|length }} results.</p>
+            <div class="divider"></div>
+            {% for result in results %}
+                <div class="result">
+                    <p class="result-title">{{ result.highlighted_file_name|safe }}</p>
+                    <p class="result-location">{{ result.highlighted_location|safe }}</p>
+                    <p class="result-content">{{ result.highlighted_content|safe }}</p>
+                </div>
+                <div class="divider"></div>
+            {% endfor %}
+        {% endif %}
+    </div>
+    <script src="{{ url_for('static', filename='js/scripts.js') }}"></script>
+</body>
+</html>

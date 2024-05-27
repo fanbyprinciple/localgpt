@@ -44,6 +44,8 @@ def search(input_keyword):
 def main():
     st.title("Search Myntra Fashion Products")
 
+    
+
     # Input: User enters search query
     search_query = st.text_input("Enter your search query")
 

@@ -11,3 +11,13 @@ First things that ran
 streamlit app
 
 ![](2024-05-26-23-11-20.png)
+
+creating an app without textual context
+
+![alt text](image.png)
+
+streamlit serve searchPdfApp.py
+
+Using flask to run the server instead
+
+![](2024-05-27-07-41-32.png)
