@@ -21,12 +21,12 @@ else:
     print("Oops!! Can not connect to Elasticsearch!")
 
 def search_with_highlights(input_keyword):
-    
     vector_of_input_keyword = input_keyword
     print("searching...")
     print(vector_of_input_keyword)
 
     body = {
+        "size" : 100, 
         "query": {
             "multi_match": {
                 "query": input_keyword,
@@ -65,13 +65,13 @@ def main():
     if st.button("Search"):
         if input_keyword:
     
-            results = search_with_highlights(input_keyword)
+            results = search_with_highlights(str(input_keyword))
             st.write(f"Found {len(results)} results.")
             st.divider()
             for result in results:
                 st.markdown(highlight_text(f"**File Name**: {result['_source']['file_name']}", input_keyword))
                 st.markdown(highlight_text(f"**Location**: {result['_source']['location']}", input_keyword))
-                st.markdown(highlight_text(f"**Content**: {get_context_around_keyword(result['_source']['content'],input_keyword)}", input_keyword))
+                st.markdown(highlight_text(f"**Context**: {get_context_around_keyword(result['_source']['content'],input_keyword)}", input_keyword))
                 st.divider()
     else:
         st.write("Please enter a search query.")

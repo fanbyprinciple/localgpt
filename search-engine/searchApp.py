@@ -2,13 +2,13 @@ import streamlit as st
 from elasticsearch import Elasticsearch
 from sentence_transformers import SentenceTransformer
 
-indexName = "all_products"
+indexName = "pdf_documents"
 
 try:
    es = Elasticsearch(
     "https://localhost:9200",
-    basic_auth=["elastic","uxVFMV452qfPJkXeYlVW"],
-    ca_certs="C:\\Users\\aonno\\Downloads\\elasticsearch-8.13.4-windows-x86_64\\elasticsearch-8.13.4\\config\\certs\\http_ca.crt"
+    basic_auth=["elastic","uolb_G+9wDf4UO+vF-y*"],
+    ca_certs="D:\\elastic_search\\config\\certs\\http_ca.crt"
     )
 
 except ConnectionError as e:

@@ -1,6 +1,10 @@
 body {
     font-family: 'Roboto', sans-serif;
-    background-color: #f4f4f9;
+    background-color: #40c4cc; /* Background color from the image */
+    background-image: url('../hqst.jpg');
+    background-repeat: no-repeat;
+    background-position:center;
+    background-size:initial;
     margin: 0;
     padding: 0;
 }
@@ -12,20 +16,27 @@ body {
     background: #fff;
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
     border-radius: 8px;
-}
-
-h1 {
     text-align: center;
-    color: #333;
 }
 
-form {
+.main-title {
+    font-size: 3em; /* Increased font size for emphasis */
+    font-weight: 700;
+    color: #000; /* Black color for the title */
+    background: linear-gradient(90deg, #007BFF, #00C853); /* Gradient color */
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.1);
+    margin-bottom: 20px;
+}
+
+.search-form {
     display: flex;
     justify-content: center;
     margin-bottom: 20px;
 }
 
-input[type="text"] {
+.search-input {
     width: 70%;
     padding: 10px;
     border: 1px solid #ccc;
@@ -34,9 +45,9 @@ input[type="text"] {
     margin-right: 10px;
 }
 
-button {
+.search-button {
     padding: 10px 20px;
-    background-color: #007BFF;
+    background-color: #000; /* Black color for the button */
     color: #fff;
     border: none;
     border-radius: 4px;
@@ -44,14 +55,13 @@ button {
     cursor: pointer;
 }
 
-button:hover {
-    background-color: #0056b3;
+.search-button:hover {
+    background-color: #333;
 }
 
 .results-count {
     font-weight: 500;
     color: #555;
-    text-align: center;
 }
 
 .divider {
