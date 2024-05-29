@@ -22,9 +22,11 @@ Using flask to run the server instead
 
 ![](2024-05-27-07-41-32.png)
 
-# issue to be taken care of 
+# Issue to be taken care of 
 
 1. search terms needs to be used together
 2. creating a button for semantic search
+3. add such that the pdf si accesible form the location on click
+
 
 

@@ -84,11 +84,12 @@ def index():
     results = []
     if request.method == "POST":
         input_keyword = request.form["query"]
+        
         if input_keyword:
             search_results = search_with_highlights(input_keyword)
             for result in search_results:
                 highlighted_file_name = highlight_text(f"File Name: {result['_source']['file_name']}", input_keyword)
-                highlighted_location = highlight_text(f"Location: {result['_source']['location']}", input_keyword)
+                highlighted_location = highlight_text(f"Location: {'file:///D:/codeplay/localgpt/search-engine/' + result['_source']['location']}", input_keyword)
                 context = get_context_around_keyword(result['_source']['content'], input_keyword)
                 highlighted_content = highlight_text(f"Context: {context}", input_keyword)
                 results.append({

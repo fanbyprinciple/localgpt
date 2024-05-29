@@ -83,19 +83,37 @@ def get_context_around_keyword(text, keyword, window_size=50):
 def index():
     results = []
     if request.method == "POST":
-        input_keyword = request.form["query"]
-        if input_keyword:
-            search_results = search_with_highlights(input_keyword)
-            for result in search_results:
-                highlighted_file_name = highlight_text(f"File Name: {result['_source']['file_name']}", input_keyword)
-                highlighted_location = highlight_text(f"Location: {result['_source']['location']}", input_keyword)
-                context = get_context_around_keyword(result['_source']['content'], input_keyword)
-                highlighted_content = highlight_text(f"Context: {context}", input_keyword)
-                results.append({
-                    "highlighted_file_name": highlighted_file_name,
-                    "highlighted_location": highlighted_location,
-                    "highlighted_content": highlighted_content
-                })
+        try:
+            input_keyword = request.form["query"]
+            if input_keyword:
+                search_results = search_with_highlights(input_keyword)
+                for result in search_results:
+                    highlighted_file_name = highlight_text(f"File Name: {result['_source']['file_name']}", input_keyword)
+                    highlighted_location = highlight_text(f"Location: {'file:///D:/codeplay/localgpt/search-engine/' + result['_source']['location']}", input_keyword)
+                    context = get_context_around_keyword(result['_source']['content'], input_keyword)
+                    highlighted_content = highlight_text(f"Context: {context}", input_keyword)
+                    results.append({
+                        "highlighted_file_name": highlighted_file_name,
+                        "highlighted_location": highlighted_location,
+                        "highlighted_content": highlighted_content
+                    })
+        except:
+            semantic = request.form["semantic"]
+            if semantic:
+                search_results = search_with_semantics(input_keyword)
+                for result in search_results:
+                    highlighted_file_name = highlight_text(f"File Name: {result['_source']['file_name']}", input_keyword)
+                    highlighted_location = highlight_text(f"Location: {'file:///D:/codeplay/localgpt/search-engine/' + result['_source']['location']}", input_keyword)
+                    context = get_context_around_keyword(result['_source']['content'], input_keyword)
+                    highlighted_content = highlight_text(f"Semantic Context: {context}", input_keyword)
+                    results.append({
+                        "highlighted_file_name": highlighted_file_name,
+                        "highlighted_location": highlighted_location,
+                        "highlighted_content": highlighted_content
+                    })
+
+       
+        
 
     return render_template("index.html", results=results)
 
