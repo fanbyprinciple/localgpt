@@ -1,0 +1,30 @@
+let plus = document.querySelector(".plus");
+let minus = document.querySelector(".minus");
+let counter = document.querySelector(".counter1");
+let frame = document.querySelector(".frame");
+
+let count = 0;
+
+let cheangeGradient = () => {
+    frame.style.backgroundColor = `rgb(${count},${count},${count})`
+
+
+}
+plus.addEventListener("click", () => {
+    count++;
+    if (count >= 255) {
+        count = 255
+    }
+
+    counter.textContent = count;
+    cheangeGradient();
+});
+minus.addEventListener("click", () => {
+
+    count--;
+    if (count <= 0) {
+        count = 0;
+    }
+    counter.textContent = count;
+    cheangeGradient();
+})

@@ -1,0 +1,93 @@
+#dashboard {
+    width: 1080px;
+    margin: 50px auto;
+    padding: 20px;
+    background-color: #ffffff;
+    border: 2px solid #cccccc;
+    box-shadow: 0 4px 8px rgba(62, 57, 57, 0.1), 0 6px 20px rgba(0, 0, 0, 0.19);
+    border-radius: 8px;
+    transform: scale(1.35);
+    transform-origin: top center;
+  }
+
+  
+  /* Specifically for the paragraph showing the total workups */
+  #dashboard p:nth-of-type(1) {
+    color: #333;
+    /* font-weight: bold; */
+  }
+
+  path {
+    stroke: #fff;
+  }
+
+  path:hover {
+    opacity: 0.9;
+  }
+
+  rect:hover {
+    fill: blue;
+  }
+
+  .legend tr {
+    border-bottom: 1px solid grey;
+    background-color: #f9f9f9; /* Light grey background */
+    }
+
+    .legend td {
+    padding: 8px 10px; /* Increase padding */
+    }
+
+  .axis, .legend {
+    font: 12px 'Arial', sans-serif;
+    }
+
+  .axis {
+    font: 10px sans-serif;
+  }
+
+  .legend tr {
+    border-bottom: 1px solid grey;
+  }
+
+  .legend tr:first-child {
+    border-top: 1px solid grey;
+  }
+
+  .axis path,
+  .axis line {
+    fill: none;
+    stroke: #000;
+    shape-rendering: crispEdges;
+  }
+
+  .x.axis path {
+    display: none;
+  }
+
+  .legend {
+    margin-bottom: -120px;
+    display: inline-block;
+    border-collapse: collapse;
+    border-spacing: 0px;
+  }
+
+  .legend td {
+    padding: 4px 5px;
+    vertical-align: bottom;
+  }
+
+  .legendFreq,
+  .legendPerc {
+    text-align: right;
+    width: 50px;
+  }
+
+  .legendFreq, .legendPerc {
+    font-weight: bold;
+    color: #333;
+    }
+
+    .axis, .legend {
+    font-size: calc(10px + 0.5vw);
+    }

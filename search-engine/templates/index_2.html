@@ -1,0 +1,203 @@
+<!doctype html>
+<html lang="en">
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<meta name="author" content="Untree.co">
+	<link rel="shortcut icon" href="favicon.png">
+
+	<meta name="description" content="" />
+	<meta name="keywords" content="bootstrap, bootstrap5" />
+
+	<!-- <link rel="preconnect" href="https://fonts.googleapis.com">
+	<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+	<link href="https://fonts.googleapis.com/css2?family=Work+Sans:wght@400;600;700&display=swap" rel="stylesheet"> -->
+
+
+	<link rel="stylesheet" href="fonts/icomoon/style.css">
+	<link rel="stylesheet" href="fonts/flaticon/font/flaticon.css">
+
+	<!-- <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.8.1/font/bootstrap-icons.css"> -->
+
+	<link rel="stylesheet" href="static/css/tiny-slider.css">
+	<link rel="stylesheet" href="static/css/aos.css">
+	<link rel="stylesheet" href="static/css/glightbox.min.css">
+	<link rel="stylesheet" href="static/css/style.css">
+	<link rel="stylesheet" href="static/css/flatpickr.min.css">
+	<link rel="stylesheet" href="static/css/scroll_text.css">
+	<link rel="stylesheet" href="static/css/waves.css">
+	<link rel="stylesheet" href="static/css/topbutton.css">
+	<link rel="stylesheet" href="static/css/wave.css">
+	<link rel="stylesheet" href="static/css/gallery.css">
+	<link rel="stylesheet" href="static/css/counter.css">
+	<link rel="stylesheet" href="static/css/work_up_stats.css">
+	<link rel="stylesheet" href="static/css/headline.css">
+
+	<meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>HQST Document Search</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='static/css/styles.css') }}">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&display=swap" rel="stylesheet">
+</head>
+<body>
+	<a id="topbutton"></a>
+
+	<div class="ag-maecenas-block">
+		<div class="ag-maecenas_title">
+		  <div class="ag-format-container">
+			HQST
+		  </div>
+		</div>
+	</div>
+
+	<div class="site-mobile-menu site-navbar-target">
+		<div class="site-mobile-menu-header">
+			<div class="site-mobile-menu-close">
+				<span class="icofont-close js-menu-toggle"></span>
+			</div>
+		</div>
+		<div class="site-mobile-menu-body"></div>
+	</div>
+
+		
+
+	<nav class="site-nav">
+		<div class="container">
+			<div class="menu-bg-wrap">
+				<div class="site-navigation">
+					<div class="row g-0 align-items-center">
+						
+						<!-- <div class="col-2">
+							<img src="fost.png" alt="Image" class="img-fluid rounded">
+						</div> -->
+						<div class="col-2" >
+							<a class="scroll" href="index.html#logo"><img src="static/inwt.png" alt="Image" class="img-fluid rounded"></a>
+						</div>
+						
+						<div class="col-4">
+							<a href="index.html#logo" class="logo m-0 float-start">Head Quarters Sea Training<span class="text-primary">.</span></a>
+						</div>
+						<div class="col-2">
+							<!-- <img src="inwt.png" alt="Image" class="img-fluid rounded"> -->
+						</div>
+						<div class="col-2">
+							<!-- <img src="inwt.png" alt="Image" class="img-fluid rounded"> -->
+						</div>
+						<div class="col-2">
+							<img src="static/fost_background.png" alt="Image" class="img-fluid rounded" style="border-radius: 18px; width: 120px; height:170px;">
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</nav>
+	<div class="container">
+		<h1 class="main-title">HQST</h1>
+		<h1 class="main-title">DOC SEARCH</h1>
+		<h3>Content based search</h3>
+		<form method="post" action="/" class="search-form">
+			<input type="text" name="query" placeholder="Enter your search query" required class="search-input">
+			<button type="submit" class="search-button">Search</button>
+		</form>
+		<h3>Semantic search (Experimental, mileage may vary)</h3>
+		<form method="post" action="/" class="search-form">
+			<input type="text" name="semantic" placeholder="Enter your search query" required class="search-input">
+			<!-- <input type="text" name="toggle" placeholder="No need for value" value="semantic"> -->
+			<button type="submit" class="search-button">Search</button>
+		</form>
+		{% if results %}
+			<p class="results-count">Found {{ results|length }} results. The context is taken from first occurrence of the keyword</p>
+			<div class="divider"></div>
+			{% for result in results %}
+				<div class="result">
+					<p class="result-title">{{ result.highlighted_file_name|safe }}</p>
+					<p class="result-location">{{ result.highlighted_location|safe }}</p>
+					<p class="result-content">{{ result.highlighted_content|safe }}</p>
+				</div>
+				<div class="divider"></div>
+			{% endfor %}
+		{% endif %}
+	</div>
+	<script src="{{ url_for('static', filename='js/scripts.js') }}"></script>
+
+
+	<div class="hero overlay">
+		<!-- <img src="images/blob.svg" alt="" class="img-fluid blob"> -->
+		<div class="container" style="padding-top: 70px;">
+			<div class="row justify-content-between pt-5">
+				<div class="col-lg-6 text-center text-lg-start pe-lg-5">
+					<h1 class="heading text-white mb-7" data-aos="fade-up">
+						Welcome to <h1 style="color: #fff;font-weight: 750;" class="typewrite" data-period="3000" data-type='[ "HQST.", "INWT." ]'>
+						  <span class="wrap"></span>
+						</h1>
+					</h1>
+						
+					<p class="text-white mb-7" data-aos="fade-up" data-aos-delay="100">Centre of Excellence in Operational Sea Training.</p>
+					
+					
+					
+					
+				</div>			  
+				
+				
+				
+			</div>
+			
+			</div>
+		</div>
+	</div>
+
+	
+	
+
+<div class="site-footer">
+	<div class="container">
+		 
+
+		<div class="row mt-5">
+			<div class="col-12 text-center">
+					<!-- 
+              **==========
+              NOTE: 
+              Please don't remove this copyright link unless you buy the license here https://untree.co/license/  
+              **==========
+            -->
+
+            <p>Contact IT department for feedback</p>
+			
+          </div>
+        </div>
+      </div> <!-- /.container -->
+    </div> <!-- /.site-footer -->
+
+    <!-- Preloader -->
+    <div id="overlayer"></div>
+    <div class="loader">
+    	<div class="spinner-border text-primary" role="status">
+    		<span class="visually-hidden">Loading...</span>
+    	</div>
+    </div>
+
+
+    <script src="static/js/bootstrap.bundle.min.js"></script>
+    <script src="static/js/tiny-slider.js"></script>
+
+    <script src="static/js/flatpickr.min.js"></script>
+
+
+    <script src="static/js/aos.js"></script>
+    <script src="static/js/glightbox.min.js"></script>
+    <script src="static/js/navbar.js"></script>
+    <script src="static/js/counter.js"></script>
+    <script src="static/js/custom.js"></script>
+	<script src="static/js/typewriter.js"></script>
+	<script src="static/js/picture_scroll.js"></script>
+	<script src="static/js/jquery.js"></script>
+	<script src="static/js/topbutton_without_img_zoom.js"></script>
+	<script src="static/js/gallery.js"></script>
+	<script src="static/js/counter.js"></script>
+	<script src="static/js/work_up_stats.js"></script>
+	<script src="static/js/headlines.js"></script>
+	<script src="{{ url_for('static', filename='js/scripts.js') }}"></script>
+  </body>
+  </html>
