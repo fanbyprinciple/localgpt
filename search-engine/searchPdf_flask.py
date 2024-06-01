@@ -4,7 +4,7 @@ from sentence_transformers import SentenceTransformer
 from typing import List
 
 app = Flask(__name__) 
-es_index = "pdf_documents"
+es_index = "harry_potter"
 
 try:
    es = Elasticsearch(
@@ -93,6 +93,7 @@ def index():
                 context = get_context_around_keyword(result['_source']['content'], input_keyword)
                 highlighted_content = highlight_text(f"Context: {context}", input_keyword)
                 results.append({
+                    "url": 'file:///D:/codeplay/localgpt/search-engine/' + result['_source']['location'],
                     "highlighted_file_name": highlighted_file_name,
                     "highlighted_location": highlighted_location,
                     "highlighted_content": highlighted_content

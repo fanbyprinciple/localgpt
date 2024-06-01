@@ -16,19 +16,20 @@
             <input type="text" name="query" placeholder="Enter your search query" required class="search-input">
             <button type="submit" class="search-button">Search</button>
         </form>
-        <h3>Semantic search (Experimental, mileage may vary)</h3>
+        <!-- <h3>Semantic search (Experimental, mileage may vary)</h3>
         <form method="post" action="/" class="search-form">
             <input type="text" name="semantic" placeholder="Enter your search query" required class="search-input">
-            <!-- <input type="text" name="toggle" placeholder="No need for value" value="semantic"> -->
+            <input type="text" name="toggle" placeholder="No need for value" value="semantic"> 
             <button type="submit" class="search-button">Search</button>
-        </form>
+        </form> -->
         {% if results %}
-            <p class="results-count">Found {{ results|length }} results. The context is taken from first occurrence of the keyword</p>
+            <p class="results-count">Found {{ results|length }} results. The context is taken from the first occurrence of the keyword</p>
             <div class="divider"></div>
             {% for result in results %}
                 <div class="result">
-                    <p class="result-title">{{ result.highlighted_file_name|safe }}</p>
+                    <p class="result-title">{{ result.highlighted_file_name|safe }}</a>
                     <p class="result-location">{{ result.highlighted_location|safe }}</p>
+                    {{result.url}}
                     <p class="result-content">{{ result.highlighted_content|safe }}</p>
                 </div>
                 <div class="divider"></div>
@@ -37,3 +38,4 @@
     </div>
     <script src="{{ url_for('static', filename='js/scripts.js') }}"></script>
 </body>
+</html>
