@@ -8,9 +8,18 @@
     <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&display=swap" rel="stylesheet">
 </head>
 <body>
+    <div id="large-header" class="large-header">
+        <div id="large-header">
+            <div class="overlay"></div>
+            <div class="content">
+        <canvas id="demo-canvas"></canvas>
+          <h1 class="main-title">HQST <span class="thin">Search</span></h1>
+          </div>
+          </div>
+    </div>
     <div class="container">
-        <h1 class="main-title">HQST</h1>
-        <h1 class="main-title">DOC SEARCH</h1>
+        <!-- <h1 class="main-title">HQST</h1>
+        <h1 class="main-title">DOC SEARCH</h1> -->
         <h3>HARRY POTTER VERSION</h3>
         <form method="post" action="/" class="search-form">
             <input type="text" name="query" placeholder="Enter your search query" required class="search-input">
@@ -36,6 +45,9 @@
             {% endfor %}
         {% endif %}
     </div>
+    <script src="{{ url_for('static', filename='js/easepack.js') }}"></script>
+    <script src="{{ url_for('static', filename='js/rAF.js') }}"></script>
+    <script src="{{ url_for('static', filename='js/tweenlite.js') }}"></script>
     <script src="{{ url_for('static', filename='js/scripts.js') }}"></script>
 </body>
 </html>
