@@ -11,7 +11,7 @@
     <div class="container">
         <h1 class="main-title">HQST</h1>
         <h1 class="main-title">DOC SEARCH</h1>
-        <h3>Content based search</h3>
+        <h3>HARRY POTTER VERSION</h3>
         <form method="post" action="/" class="search-form">
             <input type="text" name="query" placeholder="Enter your search query" required class="search-input">
             <button type="submit" class="search-button">Search</button>
@@ -29,7 +29,7 @@
                 <div class="result">
                     <p class="result-title">{{ result.highlighted_file_name|safe }}</a>
                     <p class="result-location">{{ result.highlighted_location|safe }}</p>
-                    {{result.url}}
+                    <a href={{result.url}}> check the document</a>
                     <p class="result-content">{{ result.highlighted_content|safe }}</p>
                 </div>
                 <div class="divider"></div>

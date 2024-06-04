@@ -28,5 +28,7 @@ Using flask to run the server instead
 2. creating a button for semantic search
 3. add such that the pdf si accesible form the location on click
 
+# harry potter search engine
 
+![](2024-06-05-00-09-28.png)
 
